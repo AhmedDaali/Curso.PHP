@@ -8,6 +8,7 @@
 </head>
 <body>
     <?php
+    //la variable contador al finalizar la función siempre se borrará el valor acumulado. 
             function incrementaVariable1(){
                 $contador = 0;
                 $contador++;
@@ -19,7 +20,7 @@
             incrementaVariable1();
             echo "<br>";
 
-            //Si ponemos static el valor de la variable no se borra al finalizar la función.
+            //Si ponemos static el valor de la variable no se borra al finalizar la función. Y seguirá sumando al valor último.
             function incrementaVariable2(){
                 static $contador = 0;
                 $contador++;

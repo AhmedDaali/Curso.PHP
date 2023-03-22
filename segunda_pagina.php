@@ -17,7 +17,7 @@
     print 'El nombre del usuario es:  $nombre <br>';//escribe el literal y no la variable almacenada dentro
     
     echo $nombre, $edad;//adimete varias variables sin concatenar, también es mas comun y rápido
-    echo "<br>El nombre del usuario es:  $nombre y     tiene $edad años";
+    echo "<br>El nombre del usuario es:  $nombre y tiene $edad años";
     ?>
     
 </body>
