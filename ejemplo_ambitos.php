@@ -14,13 +14,15 @@
              $nombre = "María";
 
              function dameNombre1() {
-                $nombre ="María";
+                $nombre ="Pepita";
              }
              dameNombre1();
              echo $nombre."<br>";//No cambiará si no ponemos global dentro de la función ya que en php no se puede reasignar la variables
 
              function dameNombre(){
-                global $nombre;
+                global $nombre;// variable que se usará dentro y fuera de 
+               // la función y siempre se tiene que escribir la plabra 
+               //global dentro de la función.
                 $nombre = "María";
              }
              dameNombre();
