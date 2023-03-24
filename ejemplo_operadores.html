@@ -8,7 +8,7 @@
 </head>
 <body>
     <p>&nbsp;</p>
-    <form name="form1" method="post" action="">
+    <form name="form1" method="post" action="calculadora.php">
         <p>
         <label for="num1"></label>
         <input type="text" name="num1" id="num1">
@@ -21,6 +21,8 @@
             <option>multiplicación</option>
             <option>división</option>
             <option>módulo</option>
+            <option>incremento</option>
+            <option>decremento</option>
         </select>
         </p>
         <p>&nbsp;</p>
@@ -33,10 +35,10 @@
 
     <p>&nbsp;</p>
 
-   <!--<p>
+   <p>
      <label for="resultado">Resultado</label>
-     <input type="text" name="resultado" id="resultado" value='<?php echo $resultado ?>'>
- </p>-->
+     <input type="text" name="resultado" id="resultado" value=''>
+ </p>
     
 </body>
 </html>
