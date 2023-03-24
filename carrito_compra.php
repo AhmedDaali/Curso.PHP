@@ -38,5 +38,5 @@ function initVariables(){
     $aviso2 = $_GET["aviso2"];
     $aviso3 = $_GET["aviso3"];
     $btnAddCarrito = $_GET["btnAddCarrito"];
-    
-    ?>
+     }
+ ?>
