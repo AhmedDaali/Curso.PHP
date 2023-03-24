@@ -62,6 +62,8 @@
             $usuario = $_POST["nombre_usuario"];
             $edad = $_POST["edad_usuario"];
 
+            echo $edad>18 ? "Eres mayor de edad" : "eres menor de edad";// Condición ternaria.
+
             if($usuario == "Juan"&& $edad >= "18" && $edad <"65"){
 
                 echo "<p class = 'validado'>Puedes entrar</p>";

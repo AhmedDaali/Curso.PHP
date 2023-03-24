@@ -17,48 +17,60 @@ if(isset($_POST["button"])){
     calcular($operacion);
 }
 function calcular($calculo){
-        if(!strcmp("suma", $calculo)){
+    switch($calculo){
+    // switch($calculo): //Otra forma de iniciar un switch.
+    /* switch (true){
+        case $calculo == "suma" && "otra condición" : //Si queremos añadir mas de una condición para un switch.
+    } */
+        case "suma":
             global $numero1;
             global $numero2;
             $resultado = $numero1 +$numero2;
             echo " <p class = 'resultado'>El resultado es : $resultado</p>" ;
-        }
-        if(!strcmp("resta", $calculo)){
+            break;
+  
+        case "resta":
             global $numero1;
             global $numero2;
             $resultado = ($numero1 - $numero2);
             echo " <p class = 'resultado'>El resultado es : $resultado</p>" ;
-        }
-        if(!strcmp("multiplicación", $calculo)){
+            break;
+
+        case "multiplicación":
             global $numero1;
             global $numero2;
             $resultado = ($numero1 * $numero2);
             echo " <p class = 'resultado'>El resultado es : $resultado</p>" ;
-        }
-        if(!strcmp("división", $calculo)){
+            break;
+   
+        case "división":  
             global $numero1;
             global $numero2;
             $resultado = ($numero1 / $numero2);
             echo " <p class = 'resultado'>El resultado es : $resultado</p>" ;
-        }
-        if(!strcmp("módulo", $calculo)){
+            break;
+     
+        case "módulo":    
             global $numero1;
             global $numero2;
             $resultado = ($numero1 % $numero2);
             echo " <p class = 'resultado'>El resultado es : $resultado</p>" ;
+            break;
 
-        }
-        if(!strcmp("incremento", $calculo)){
+        case "incremento":    
             global $numero1;
             $numero1++;
             $resultado = $numero1;
             echo " <p class = 'resultado'>El resultado es : $resultado</p>" ;
-        }
-        if(!strcmp("decremento", $calculo)){
+            break;
+   
+        case "decremento":    
             global $numero1;
             $numero1--;
             $resultado = $numero1;
             echo " <p class = 'resultado'>El resultado es : $resultado</p>" ;
+            break;
         }
+        //endswitch; //Para cerrar el switch si hemos usado dos puntos y no la llave. 
 }
 ?>
