@@ -8,37 +8,28 @@
 </head>
 <body>
     <?php
-    class Coche {
-        /** @var int $ruedas */
-        public $ruedas;
-        public string $color;
-        public int $motor;
 
+    include ("coche.php");
 
-        public function __construct(){//Constructor
-            
-            $this->ruedas = 4;
-            $this-> color = "Rojo";
-            $this->motor = 1600;
-        }
+    $coche1 = new Coche("Renault","Rojo");//Estado inicial al objeto 
+    $coche2 = new Coche("Mazda","Verde");
+    $coche3 = new Coche("Seat","Azul");
 
-        function arrancar(){
-            echo"Estoy arrancando<br/>";
-        }
-        function girar(){
-            echo"Estoy girando<br/>";
-        }
-        function frenar(){
-            echo"Estoy frenando<br/>";
-        }
+    echo $coche1->marca . "<br/>";
+    $coche1->arrancar();
+    echo $coche1->ruedas . "<br/>";
+    echo $coche1->color . "<br/>";
 
-    }
-    $renault = new Coche();//Estado inicial al objeto 
-    $mazda = new Coche();
-    $seat = new Coche();
+    echo $coche2->marca . "<br/>";
+    $coche2->girar();
+    echo $coche2->ruedas . "<br/>";
+    echo $coche2->color . "<br/>";
 
-    $renault->arrancar();
-    echo $mazda->color;
+    echo $coche3->marca . "<br/>";
+    $coche3->frenar();
+    echo $coche3->ruedas . "<br/>";
+    echo $coche3->color . "<br/>";
+   
     ?>
     
 </body>
