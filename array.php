@@ -52,10 +52,28 @@
     //Añadimos elemntos al array asociativo.
     $semana3["dia5"] = "Viernes";
     foreach ($semana3 as $clave =>$valor){//Recorrer el diccionário. 
-        
+
         echo $clave . ": " . $valor . "<br/>";
         }
-    
+        echo"====================<br/>";
+    $alimentos=array("fruta"=>array("tropical"=>"kiwi",
+                                                    "cítrico"=>"mdandareina",
+                                                    "otros"=>"manzana"),
+                            "leche"=>array("animal"=>"vaca",
+                                                    "vegetal"=>"coco"),
+                          "carne"=>array("vacuno"=>"lomo",
+                                                    "porcino"=>"pata"));
+    echo"====================<br/>";
+  echo $alimentos["carne"]["vacuno"] . "<br/>";     
+  
+  echo"====================<br/>";
+  foreach($alimentos as $clave_alim=>$alim){
+    echo"clave_alim: <br/>";
+    while(list($clave, $valor) =each($alim)){
+        echo "$clave = $valor<br/>";
+    }
+    echo"<br/>";
+  }                                   
     ?>
 </body>
 </html>
